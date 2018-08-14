@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku_combination: MyString
+  sku_denomination: 1
+
+two:
+  sku_combination: MyString
+  sku_denomination: 1

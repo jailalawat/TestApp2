@@ -1,0 +1,26 @@
+<%- model_class = SkuCombination -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:sku_denomination) %></th>
+      <th><%= model_class.human_attribute_name(:sku_combination) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sku_combinations.each do |sku_combination| %>
+      <tr>
+        <td><%= sku_combination.sku_denomination %></td>
+        <td><%= sku_combination.sku_combination %></td>
+        <td><%=l sku_combination.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_sku_combination_path,
+            :class => 'btn btn-primary' %>
